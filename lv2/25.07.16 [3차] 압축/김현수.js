@@ -8,8 +8,6 @@ function solution(msg) {
     new Array(26).fill(0).map((_, i) => [String.fromCharCode(i + 65), i + 1])
   );
 
-  let currentIndex = 27;
-
   // 한 글자씩 바깥 for문으로 순회한다.
   for (let i = 0; i < msg.length; i += 1) {
     let currentString = msg[i];
@@ -30,9 +28,8 @@ function solution(msg) {
     }
 
     // 만약 없으면 dictionary에 set. 임시 저장했던 색인 출력.
-    map.set(currentString, currentIndex);
+    map.set(currentString, map.size + 1);
     answer.push(index);
-    currentIndex += 1;
   }
 
   return answer;
