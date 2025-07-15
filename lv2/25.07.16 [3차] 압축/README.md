@@ -2,21 +2,9 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/17684)
 
-### 성능 요약
-
-메모리: 33.6 MB, 시간: 0.69 ms
-
 ### 구분
 
 코딩테스트 연습 > 2018 KAKAO BLIND RECRUITMENT
-
-### 채점결과
-
-정확성: 100.0<br/>합계: 100.0 / 100.0
-
-### 제출 일자
-
-2025년 07월 10일 23:48:10
 
 ### 문제 설명
 
