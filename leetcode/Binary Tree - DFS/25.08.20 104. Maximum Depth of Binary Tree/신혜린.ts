@@ -10,7 +10,7 @@ class TreeNode {
 }
 
 // 1차 시도 - BFS 너비 우선 탐색
-function maxDepth(root: TreeNode | null): number {
+function maxDepth1(root: TreeNode | null): number {
   if (root === null) return 0
 
   const queue: TreeNode[] = []

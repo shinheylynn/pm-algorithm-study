@@ -18,6 +18,7 @@
 #### ㄴ Binary Tree - DFS
 
 1. [25.08.20 104. Maximum Depth of Binary Tree](./leetcode/Binary%20Tree%20-%20DFS/25.08.20%20104.%20Maximum%20Depth%20of%20Binary%20Tree/)
+2. [25.08.27 94. Binary Tree Inorder Traversal](/leetcode/Binary%20Tree%20-%20DFS/25.08.27%2094.%20Binary%20Tree%20Inorder%20Traversal/)
 
 <br/>
 <br/>
