@@ -15,6 +15,9 @@
 # 📁 문제 목록
 
 ### ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+#### ㄴ Binary Search
+1. [25.09.02 35. Search Insert Position](./leetcode/Binary%20Search/25.09.03%2035.%20Search%20Insert%20Position/)
+
 #### ㄴ Binary Tree - DFS
 
 1. [25.08.20 104. Maximum Depth of Binary Tree](./leetcode/Binary%20Tree%20-%20DFS/25.08.20%20104.%20Maximum%20Depth%20of%20Binary%20Tree/)
