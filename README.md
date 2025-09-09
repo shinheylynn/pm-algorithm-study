@@ -17,6 +17,7 @@
 ### ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 #### ㄴ Binary Search
 1. [25.09.02 35. Search Insert Position](./leetcode/Binary%20Search/25.09.03%2035.%20Search%20Insert%20Position/)
+2. [25.09.09 278. First Bad Version](./leetcode/Binary%20Search/25.09.10%20278.%20First%20Bad%20Version/)
 
 #### ㄴ Binary Tree - DFS
 
