@@ -15,7 +15,9 @@
 # 📁 문제 목록
 
 ### ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
 #### ㄴ Binary Search
+
 1. [25.09.02 35. Search Insert Position](./leetcode/Binary%20Search/25.09.03%2035.%20Search%20Insert%20Position/)
 2. [25.09.10 278. First Bad Version](./leetcode/Binary%20Search/25.09.10%20278.%20First%20Bad%20Version/)
 3. [25.09.18 33. Search in Rotated Sorted Array](./leetcode/Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array/)
@@ -24,6 +26,11 @@
 
 1. [25.08.20 104. Maximum Depth of Binary Tree](./leetcode/Binary%20Tree%20-%20DFS/25.08.20%20104.%20Maximum%20Depth%20of%20Binary%20Tree/)
 2. [25.08.27 94. Binary Tree Inorder Traversal](/leetcode/Binary%20Tree%20-%20DFS/25.08.27%2094.%20Binary%20Tree%20Inorder%20Traversal/)
+
+#### ㄴ Linked List
+
+1. [25.09.24 2. Add Two Numbers](./leetcode/Linked%20List/25.09.24%202.%20Add%20Two%20Numbers/)
+2. [25.10.01 23. Merge k Sorted Lists](./leetcode/Linked%20List/25.10.01%2023.%20Merge%20k%20Sorted%20Lists/)
 
 <br/>
 <br/>
