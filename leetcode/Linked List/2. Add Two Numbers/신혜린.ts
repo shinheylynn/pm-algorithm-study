@@ -7,42 +7,27 @@ class ListNode {
   }
 }
 
+// 처음에는 while 문 속에서 list head > next 순서로 가면서 1, 10, 100씩 곱해서 총합을 구하는 방식으로 풀려고 했음
+// 근데 그럼 다시 또 number 를 ListNode 로 변환해야 하고 그렇게 되면 메모리 낭비가 심해짐
+// 그래서 메모리 낭비 없이 풀 수 있는 방법을 찾다가 carry 값을 사용하는 방법을 찾음
+
 function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-  const sum = reverseList(l1) + reverseList(l2)
-  
-  let node = new ListNode(sum % 10)
-  let current = node
+  const dummy = new ListNode(0)
+  let curr = dummy
+  let carry = 0 // carry = 한 자리의 합이 10 이상이 되면, 다음 자리로 넘겨야 하는 값(1) 을 저장하는 용도
 
-  console.log('node', node)
-  console.log('current', current)
-  
-  return node
-}
+  while (l1 !== null || l2 !== null || carry > 0) {
+    const val1 = l1 !== null ? l1.val : 0
+    const val2 = l2 !== null ? l2.val : 0
 
-const reverseList = (node: ListNode | null): number => {
-  let number = 0
-  let current = node
-  let multiplier = 1
+    const sum = val1 + val2 + carry
+    carry = sum >= 10 ? 1 : 0 // sum이 10 이상이면 다음 자리로 1을 넘겨야 하므로 carry를 1로 설정
+    curr.next = new ListNode(sum % 10) // 다음 자릿수를 next로 저장하기 위해 10으로 나눈 나머지를 저장
 
-  while (current) {
-    number += current.val * multiplier
-    multiplier *= 10
-    current = current.next
+    curr = curr.next
+    if (l1) l1 = l1.next // l1이 있으면 l1을 다음 노드로 이동
+    if (l2) l2 = l2.next // l2이 있으면 l2을 다음 노드로 이동
   }
 
-  return number
+  return dummy.next
 }
-
-// 테스트 케이스
-// l1 = [2,4,3] (숫자 342를 나타냄)
-const l1 = new ListNode(2, new ListNode(4, new ListNode(3)))
-
-// l2 = [5,6,4] (숫자 465를 나타냄)
-const l2 = new ListNode(5, new ListNode(6, new ListNode(4)))
-
-console.log('=== 테스트 실행 ===')
-console.log('l1:', l1)
-console.log('l2:', l2)
-console.log('\n=== addTwoNumbers 실행 결과 ===')
-const result = addTwoNumbers(l1, l2)
-console.log('\nresult:', result)
