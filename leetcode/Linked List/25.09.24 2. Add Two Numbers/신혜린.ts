@@ -12,8 +12,8 @@ class ListNode {
 // 그래서 메모리 낭비 없이 풀 수 있는 방법을 찾다가 carry 값을 사용하는 방법을 찾음
 
 function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-  const dummy = new ListNode(0)
-  let curr = dummy
+  const dummy = new ListNode(0) // 연결 리스트의 시작점을 기억하기 위한 고정된 노드
+  let curr = dummy // 연결 리스트를 순회하면서 새로운 노드를 이어붙이기 위한 포인터 역할
   let carry = 0 // carry = 한 자리의 합이 10 이상이 되면, 다음 자리로 넘겨야 하는 값(1) 을 저장하는 용도
 
   while (l1 !== null || l2 !== null || carry > 0) {
@@ -29,5 +29,10 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
     if (l2) l2 = l2.next // l2이 있으면 l2을 다음 노드로 이동
   }
 
-  return dummy.next
+  return dummy.next // dummy는 결과 리스트의 맨 앞에 위치하지만, dummy.next 를 반환하기 때문에 결과에는 포함되지 않음
 }
+
+
+// dummy 자체를 let을 선언하면 안되나? -> 안됨
+// 만약 dummy를 직접 변경(dummy = dummy.next)하게 되면 리스트의 시작점 을 잃어버리게 됨
+// 즉, return dummy.next 를 통한 정답을 반환할 수 없게 되고 null이 반환됨.
