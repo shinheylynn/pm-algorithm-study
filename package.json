@@ -11,7 +11,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx ts-node-dev '/Users/heylynn/Desktop/medistream/pm-algorithm-study/leetcode/Linked List/25.10.01 23. Merge k Sorted Lists/신혜린.ts'"
+    "dev": "npx ts-node-dev '/Users/heylynn/Desktop/pm-algorithm-study/leetcode/Sorting/25.10.20 88. Merge Sorted Array/신혜린.ts'"
   },
   "repository": {
     "type": "git",
