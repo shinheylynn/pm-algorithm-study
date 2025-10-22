@@ -57,6 +57,16 @@ npm run update-readme
 1. [25.10.20 88. Merge Sorted Array](./leetcode/Sorting/25.10.20%2088.%20Merge%20Sorted%20Array/)
 
 ### ![Programmers](https://img.shields.io/badge/Programmers-000000?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAgCAYAAADkK90uAAAABHNCSVQICAgIfAhkiAAAAYFJREFUaEPtmD9LQlEYxs/1D0kRgqCpscaWwC0SHIPAj9DQ1hcICqGxoU8QuLa2R0NRBI4RYRBBBhFCkFNTw0MvnMNVLnru1fdwOc8Nz3Z43+f3e855r0fIsgz+8WcQEP6MJX8QQvgzlvxBCCGEkEXAn7XkT0IIIYQQQgghhBBCyKLlz1ryJyGEEEIIIYQQQgghhCxa/qwlfxJCCCGEEEIIIYQQQhYtf9aSPwkhhBBCCCGEEEIIIYuWP2vJn4QQQgghhBBCCCGEkEXLn7XkT0IIIYQQQgghhBBCyKLlz1ryJyGEEEIIIYQQQgghi5Y/a8mfhBBCCCGEEEIIIYSQRcuftZQ/yWQyQbfbhcFgALZtg2EYoGkaKIoCkiSBKIogCAKIoghfH4ZhQK/Xg/F4DJZlgWmaYBgGaJoGqqpCLBaDeDwOkiTNHWI6nUK/34dhOATLsmE0GkE6nQZN00DTNEgkEpBMJkGWZU/3+v0+2LYNpmk6/6uqCslkElKpFMiyDNFo1NOz3h/z8cR/AXcYZhzw8uXHAAAAAElFTkSuQmCC)
+
+#### ㄴ lv2
+
+1. [25.07.02 [3차] n진수 게임](./programmers/lv2/25.07.02%20%5B3%EC%B0%A8%5D%20n%EC%A7%84%EC%88%98%20%EA%B2%8C%EC%9E%84/)
+2. [25.07.09 k진수에서 소수 개수 구하기](./programmers/lv2/25.07.09%20k%EC%A7%84%EC%88%98%EC%97%90%EC%84%9C%20%EC%86%8C%EC%88%98%20%EA%B0%9C%EC%88%98%20%EA%B5%AC%ED%95%98%EA%B8%B0/)
+3. [25.07.16 [3차] 압축](./programmers/lv2/25.07.16%20%5B3%EC%B0%A8%5D%20%EC%95%95%EC%B6%95/)
+4. [25.07.23 두 큐 합 같게 만들기](./programmers/lv2/25.07.23%20%EB%91%90%20%ED%81%90%20%ED%95%A9%20%EA%B0%99%EA%B2%8C%20%EB%A7%8C%EB%93%A4%EA%B8%B0/)
+5. [25.07.30 비밀 코드 해독](./programmers/lv2/25.07.30%20%EB%B9%84%EB%B0%80%20%EC%BD%94%EB%93%9C%20%ED%95%B4%EB%8F%85/)
+6. [25.08.06 피로도](./programmers/lv2/25.08.06%20%ED%94%BC%EB%A1%9C%EB%8F%84/)
+
 #### ㄴ lv2
 
 1. [25.07.02 [3차] n진수 게임](./programmers/lv2/25.07.02%20%5B3%EC%B0%A8%5D%20n%EC%A7%84%EC%88%98%20%EA%B2%8C%EC%9E%84/)
