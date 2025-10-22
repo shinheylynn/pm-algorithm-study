@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# README.md 업데이트
+npm run update-readme
+
+# 변경된 README.md를 스테이징에 추가
+git add README.md
+
+# 변경사항이 있다면 커밋
+if [ -n "$(git status --porcelain)" ]; then
+  git commit -m "docs: Update README.md automatically"
+fi
