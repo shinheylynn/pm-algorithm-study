@@ -108,9 +108,9 @@ async function main() {
     try {
         const categories = await scanLeetcodeDirectory();
         await updateReadme(categories);
-        console.log('✅ README.md has been successfully updated!');
+        console.log('✅ README.md has been successfully updated!\n');
     } catch (error) {
-        console.error('❌ Error updating README.md:', error);
+        console.error('❌ Error updating README.md:', error, '\n');
     }
 }
 
