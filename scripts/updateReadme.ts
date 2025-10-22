@@ -129,20 +129,22 @@ async function updateReadme(leetcodeCategories: Category[], programmersCategorie
     let content = await fs.readFile(README_PATH, 'utf8');
 
     // LeetCode 섹션 업데이트
-    let startIdx = content.indexOf(LEETCODE_SECTION);
-    if (startIdx === -1) {
+    let leetcodeStartIdx = content.indexOf(LEETCODE_SECTION);
+    if (leetcodeStartIdx === -1) {
         console.error('LeetCode section not found in README.md');
         return;
     }
 
-    let endIdx = content.indexOf(PROGRAMMERS_SECTION, startIdx);
-    if (endIdx === -1) {
-        endIdx = content.length;
+    let leetcodeEndIdx = content.indexOf(PROGRAMMERS_SECTION, leetcodeStartIdx);
+    if (leetcodeEndIdx === -1) {
+        leetcodeEndIdx = content.indexOf('###', leetcodeStartIdx + LEETCODE_SECTION.length);
+        if (leetcodeEndIdx === -1) {
+            leetcodeEndIdx = content.length;
+        }
     }
 
     // 새로운 LeetCode 섹션 생성
     let newLeetCodeSection = LEETCODE_SECTION + '\n\n';
-    
     for (const category of leetcodeCategories) {
         newLeetCodeSection += `#### ㄴ ${category.name}\n\n`;
         category.problems.forEach((problem, index) => {
@@ -152,7 +154,8 @@ async function updateReadme(leetcodeCategories: Category[], programmersCategorie
     }
 
     // Programmers 섹션 업데이트
-    let newProgrammersSection = PROGRAMMERS_SECTION + '\n';
+    let programmersStartIdx = content.indexOf(PROGRAMMERS_SECTION);
+    let newProgrammersSection = PROGRAMMERS_SECTION + '\n\n';
     
     for (const category of programmersCategories) {
         newProgrammersSection += `#### ㄴ ${category.name}\n\n`;
@@ -162,18 +165,27 @@ async function updateReadme(leetcodeCategories: Category[], programmersCategorie
         newProgrammersSection += '\n';
     }
 
-    // README 파일 업데이트
-    let updatedContent = content.substring(0, startIdx) + newLeetCodeSection;
+    // 각 섹션을 개별적으로 업데이트
+    let updatedContent = content;
 
-    // Programmers 섹션이 있으면 그 위치부터 시작, 없으면 파일 끝에 추가
-    const programmersStartIdx = content.indexOf(PROGRAMMERS_SECTION);
+    // LeetCode 섹션 업데이트
+    updatedContent = 
+        content.substring(0, leetcodeStartIdx) + 
+        newLeetCodeSection + 
+        content.substring(leetcodeEndIdx);
+
+    // Programmers 섹션 업데이트
     if (programmersStartIdx !== -1) {
-        const nextSectionIdx = content.indexOf('###', programmersStartIdx + PROGRAMMERS_SECTION.length);
-        updatedContent += content.substring(endIdx, programmersStartIdx) + newProgrammersSection;
-        if (nextSectionIdx !== -1) {
-            updatedContent += content.substring(nextSectionIdx);
+        let programmersEndIdx = content.indexOf('###', programmersStartIdx + PROGRAMMERS_SECTION.length);
+        if (programmersEndIdx === -1) {
+            programmersEndIdx = content.length;
         }
+        updatedContent = 
+            updatedContent.substring(0, programmersStartIdx) + 
+            newProgrammersSection + 
+            updatedContent.substring(programmersEndIdx);
     } else {
+        // Programmers 섹션이 없으면 파일 끝에 추가
         updatedContent += '\n' + newProgrammersSection;
     }
 
