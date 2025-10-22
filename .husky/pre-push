@@ -1,3 +1,9 @@
+# leetcode 폴더의 변경사항 확인
+if git diff --quiet HEAD leetcode/; then
+  echo "✨ No changes in leetcode directory. Skipping README update.\n"
+  exit 0
+fi
+
 # README.md 업데이트
 npm run update-readme
 
