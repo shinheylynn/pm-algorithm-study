@@ -14,9 +14,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx ts-node-dev '/Users/heylynn/Desktop/pm-algorithm-study/leetcode/Sorting/25.10.29 169. Majority Element/신혜린.ts'",
+    "dev": "npx ts-node-dev '/Users/heylynn/Desktop/pm-algorithm-study/leetcode/Sorting/25.11.05 229. Majority Element II/신혜린.ts'",
     "update-readme": "ts-node scripts/updateReadme.ts",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",

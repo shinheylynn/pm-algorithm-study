@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 # leetcode 폴더의 변경사항 확인
 # if git diff --quiet HEAD leetcode/; then
 #   echo "✨ No changes in leetcode directory. Skipping README update.\n"
